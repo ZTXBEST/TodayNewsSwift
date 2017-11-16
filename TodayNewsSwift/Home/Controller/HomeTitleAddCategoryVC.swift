@@ -30,7 +30,7 @@ extension HomeTitleAddCategoryVC {
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30);
         button.x = 10
-        
+        topView.addSubview(button)
     }
     
     fileprivate func initCollectionView() {
