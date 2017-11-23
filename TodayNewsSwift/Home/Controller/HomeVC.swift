@@ -82,6 +82,16 @@ extension HomeVC {
 extension HomeVC {
     @objc func homeTitleLabelAddBtnClick(notification:Notification) {
         let titles = notification.object as! [HomeTitleModel]
-        
+        let homeTitleCategoryVC = HomeTitleAddCategoryVC()
+        homeTitleCategoryVC.modalSize = (width: .full, height: .custom(size: Float(KScreenHeight - 20)))
+        self.present(homeTitleCategoryVC, animated: true) {
+            
+        };
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
+
+
